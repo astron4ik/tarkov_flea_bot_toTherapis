@@ -7,3 +7,9 @@ I can make about 5-8 million rubles a day with this bot.
 The "PHPSESSID" needed in the script can be obtained in the startup parameters of "EscapeFromTarkov_BE.exe" when the client starts, but it needs to end the game process immediately, because once the game starts successfully, it will try to replace the PHPSESSID.
 
 have fun.
+
+Fork by Astron4ik
+Added module for reading the token and closing the process with the game.
+1) Start script
+2) Start game
+*) Game auto closed and get Token
