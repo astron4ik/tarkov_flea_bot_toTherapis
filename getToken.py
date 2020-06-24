@@ -36,7 +36,3 @@ def getToken():
         if token is not None:
             subprocess.Popen(command, stdout=DEVNULL, stderr=DEVNULL)
             return token
-
-
-if __name__ == '__main__':
-    print(getToken())
