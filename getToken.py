@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import psutil
 import os
+import subprocess
+
+# for silent message stdout, stderr
+DEVNULL = open(os.devnull, 'wb')
 
 # Get Process pID
 def getProcessPID(processName):
@@ -27,12 +31,10 @@ def getToken():
             token = psutil.Process(getProcessPID('EscapeFromTarkov_BE.exe')).cmdline()[3][7:]
             pID = getProcessPID('EscapeFromTarkov_BE.exe')
             command = 'taskkill /PID ' + str(pID)
-            os.system(command)
         except:
             pass
         if token is not None:
-            p = psutil.Process(pID)
-            p.kill
+            subprocess.Popen(command, stdout=DEVNULL, stderr=DEVNULL)
             return token
 
 
