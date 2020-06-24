@@ -9,6 +9,7 @@ The "PHPSESSID" needed in the script can be obtained in the startup parameters o
 have fun.
 
 Fork by Astron4ik
+
 Added module for reading the token and closing the process with the game.
 1) Start script
 2) Start game
