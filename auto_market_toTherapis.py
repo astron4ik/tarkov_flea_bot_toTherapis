@@ -1,16 +1,20 @@
 #  -*- coding: UTF-8 -*-
-import requests, zlib, hashlib, json
+import requests
+import zlib
+import hashlib
+import json
 import datetime
 import traceback
 import os
 import time, threading
 from multiprocessing.pool import ThreadPool
 import random
+import getToken as token
 
 cookies = {}
 headers = {'User-Agent': 'UnityPlayer/2018.4.13f1 (UnityWebRequest/1.0, libcurl/7.52.0-DEV)',  # check it
            'Content-Type': 'application/json',
-           'App-Version': 'EFT Client 0.12.6.7526', # check it
+           'App-Version': 'EFT Client 0.12.6.7886', # check it
            'X-Unity-Version': '2018.4.13f1'  # check it
            }
 
@@ -374,7 +378,9 @@ def update_profile():
 
 
 if __name__ == '__main__':
-    PHPSESSID = input("ENTER YOU PHPSESSID: ")
+    # PHPSESSID = input("ENTER YOU PHPSESSID: ")
+    print('You PHPSESSID', token.getToken())
+    PHPSESSID = token.getToken()
     cookies = {'PHPSESSID': PHPSESSID}
     pool = ThreadPool(2)
 
