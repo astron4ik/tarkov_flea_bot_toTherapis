@@ -379,8 +379,8 @@ def update_profile():
 
 if __name__ == '__main__':
     # PHPSESSID = input("ENTER YOU PHPSESSID: ")
-    print('You PHPSESSID', token.getToken())
     PHPSESSID = token.getToken()
+    print('You PHPSESSID:', PHPSESSID)
     cookies = {'PHPSESSID': PHPSESSID}
     pool = ThreadPool(2)
 
